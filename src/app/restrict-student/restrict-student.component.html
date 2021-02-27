@@ -1,0 +1,17 @@
+<div><h1>Restrict Student from Prom</h1></div>
+<div [hidden]="submitted" style="width: 400px;">
+<form (ngSubmit)="onSubmit()">
+<div class= "form-group">
+    <label for="name">Student ID Number</label>
+    <input type= "text" class= "form-control" name="studentId" required [(ngModel)]="studentId">
+</div>
+
+<div class= "form-group">
+    <label for="name">Restricted Reason</label>
+    <input type= "text" class= "form-control" name="restrictedReason" required [(ngModel)]="restrictedReason">
+</div>
+
+    <button class= "btn btn-success">Restrict</button>
+</form>
+
+</div>

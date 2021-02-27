@@ -1,0 +1,26 @@
+<h1>Registered Students</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+    <table matSort (matSortChange)= "sortData($event)">
+        <thead>
+            <th mat-sort-header="firstName">First Name</th>
+            <th mat-sort-header="lastName">Last Name</th> 
+            <th mat-sort-header="studentId">Student ID#</th>
+            <th mat-sort-header="ticketNumber">Ticket#</th>
+            <th mat-sort-header="status">Status</th>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let student of sortedData">
+                <td>{{student.firstName}}</td>
+                <td>{{student.lastName}}</td>
+                <td>{{student.studentId}}</td>
+                <td>{{student.ticketNumber}}</td>
+                <td>{{student.status}}</td>
+                <td><button (click)="updateStudent(student.id)" class="btn btn-success">UPDATE</button></td>
+                <td><button (click)="deleteStudent(student.id)" class="btn btn-warning">DELETE</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

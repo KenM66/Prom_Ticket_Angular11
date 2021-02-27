@@ -1,0 +1,27 @@
+<div><h1>Register New School</h1></div>
+<div class="container">
+<form (ngSubmit)="onSubmit()">
+<div class= "form-group">
+    <label for="name">School Name</label>
+    <input type="text" class="form-control" name= "schoolName" required [(ngModel)]="school.schoolName" name= "schoolName">
+</div>
+    <br><br>
+<div class="form-group">
+    <label>Username</label>
+    <input type="text" class= "form-control" name= "userName" required [(ngModel)]="school.userName" name= "userName">
+</div>
+    <br><br>
+<div class="form-group">
+    <label for="name">Password</label>
+    <input type= "password" class="form-control" name="password" required [(ngModel)]="school.password" name="password">
+</div>
+    <br><br>
+<div class= "form-group">
+    <label for="name">Re-Enter Password</label>
+    <input type= "password" class= "form-control" name="password2" required [(ngModel)]="password2">
+</div>
+    <br><br>
+    <button class= "btn btn-success">Register</button>
+</form>
+
+</div>

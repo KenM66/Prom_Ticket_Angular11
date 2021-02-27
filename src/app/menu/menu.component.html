@@ -1,0 +1,26 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      
+    <div>
+        <ul id="mainMenu" class="navbar-nav">
+          <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Home</a></li>
+          <li><a routerLink='/students' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">View/Edit Students</a></li>
+          <li><a routerLink='/newstudent' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">New Student</a></li>
+          <li><a routerLink='/assign' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Assign Ticket</a></li>
+          <li><a routerLink='/admit' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Admit Student</a></li>
+          <li><a routerLink='/restrict' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Restrict Student</a></li>
+         </ul>
+         <br>
+         <br>
+         <ul id="mainMenu" class= "navbar-nav navbar-collapse justify-content-end">
+             <li><a routerLink='/login' *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()">Login</a></li>
+             <li><a routerLink='/logout' *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Logout</a></li>
+         </ul>
+      </div>
+  </nav>  
+</header>
+
+
+
+
+

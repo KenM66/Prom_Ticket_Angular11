@@ -1,0 +1,8 @@
+<div><h1>Admit Student</h1></div>
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <label for="name">Ticket Number</label>
+        <input type="text" class="form-control" name="ticketNumber" required [(ngModel)]="ticketNumber"><br><br>
+        <button class= "btn btn-success">Admit</button>
+    </form>
+</div>

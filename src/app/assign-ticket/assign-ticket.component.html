@@ -1,0 +1,12 @@
+<div><H1>Assign Ticket</H1></div>
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+       <label for ="name">Ticket Number</label>
+       <input type="text" class="form-control" name="ticketNumber" required [(ngModel)]="ticketNumber"><br>
+       <label for ="name">Student ID Number</label>
+       <input type="text" class="form-control" name="studentId" required [(ngModel)]="studentId"><br><br>
+       <button class= "btn btn-success">Assign</button>
+
+    </form>
+</div>
